@@ -1,0 +1,2 @@
+import {Bell,Radio} from 'lucide-react';
+export default function Header({title,alerts,ws}){return <header className="header"><div><div className="eyebrow">EXPEDITION OPERATIONS</div><h1>{title}</h1></div><div className="headerRight"><span className={ws?'connection':'connection offline'}><Radio size={15}/> {ws?'LIVE':'OFFLINE'}</span><button className="iconBtn"><Bell size={19}/>{alerts>0&&<i>{alerts}</i>}</button><div className="user"><div className="avatar">CO</div><div><b>Control Officer</b><small>Operations</small></div></div></div></header>}

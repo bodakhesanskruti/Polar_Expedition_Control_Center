@@ -1,0 +1,61 @@
+/* The map and Leaflet's own container must all have a definite height.
+   This prevents the map from collapsing inside CSS grid/flex panels. */
+.liveMapSurface,
+.leafletMissionMap,
+.leafletMissionMap .leaflet-pane,
+.leafletMissionMap .leaflet-tile-pane {
+  width: 100%;
+  height: 100%;
+}
+
+.liveMapSurface {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background: #1b252a;
+}
+
+.leafletMissionMap {
+  min-height: 0;
+  background: #1b252a;
+  font: inherit;
+}
+
+.leafletMissionMap .leaflet-tile {
+  filter: grayscale(0.7) brightness(0.72) contrast(0.9) sepia(0.12) hue-rotate(145deg);
+}
+
+.leafletMissionMap .leaflet-control-attribution {
+  background: rgba(13, 20, 24, 0.75);
+  color: #80959d;
+  font-size: 9px;
+}
+
+.leafletMissionMap .leaflet-control-attribution a {
+  color: #75b8d4;
+}
+
+.leafletMissionMap .leaflet-popup-content-wrapper,
+.leafletMissionMap .leaflet-popup-tip {
+  background: #182328;
+  color: #dce7ea;
+}
+
+.leafletMissionMap .leaflet-popup-content {
+  margin: 10px 13px;
+  line-height: 1.6;
+}
+
+.leafletMissionMap .leaflet-popup-close-button {
+  color: #9eb1b8 !important;
+}
+
+.leafletMissionMap .leaflet-control-zoom a {
+  background: #172126;
+  color: #dce7ea;
+  border-color: #34464e;
+}
+
+.leafletMissionMap .leaflet-control-zoom a:hover {
+  background: #25343a;
+}
